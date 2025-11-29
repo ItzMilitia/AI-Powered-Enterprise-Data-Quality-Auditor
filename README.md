@@ -5,14 +5,14 @@ Designed for enterprise data engineering teams, deployed on Hugging Face Spaces,
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-**Hugging Face Space:** *(Add your HF URL here)*  
+**Hugging Face Space:** https://huggingface.co/spaces/ItzMilitia/AI-Powered-Enterprise-Data-Quality-Auditor  
 **GitHub Repository:** https://github.com/ItzMilitia/AI-Powered-Enterprise-Data-Quality-Auditor
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 Data quality is one of the biggest hidden bottlenecks in enterprise analytics and machine learning.  
 Teams spend enormous time detecting and fixing issues such as:
@@ -29,7 +29,7 @@ The system audits datasets, generates a **Global Data Quality Score**, and provi
 
 ---
 
-## 🧠 Why Agents?
+## Why Agents?
 
 Traditional scripts run checks sequentially. Data quality auditing, however, is inherently **multi-step** and **modular**, making it perfect for agent-based design:
 
@@ -57,45 +57,9 @@ Agent-based design gives:
 - ✔ Better explainability  
 - ✔ Easier future expansion  
 
----
+## Features
 
-## 🏗 Architecture
-
-User Input
-│
-▼
-Main Agent
-│
-Decides: Audit Mode or Conversation Mode
-│
-├──────────────────────────────┐
-│ │
-▼ ▼
-Planner Agent Conversational Response
-│
-▼
-Audit Plan
-│
-▼
-Worker Agents (parallel checks)
-│
-▼
-Collected Results
-│
-▼
-Evaluator Agent
-│
-▼
-Final JSON Report + Score + Summary
-
-yaml
-Copy code
-
----
-
-## 🧪 Features
-
-### 🔍 Automated Data Quality Checks
+### Automated Data Quality Checks
 - Missing values  
 - Schema / type drift  
 - Duplicates  
@@ -103,28 +67,28 @@ Copy code
 - Dataset completeness  
 - Column statistics  
 
-### 📊 Global Score
+### Global Score
 A weighted scoring model produces a final **0–100 quality score**.
 
-### 📝 Reporting
+### Reporting
 - JSON structured findings  
 - Human-readable summaries  
 - Session logs  
 - Full audit history  
 
-### 🧠 Memory Support
+### Memory Support
 - Stores previous runs  
 - Multi-turn conversations  
 - Repeated queries inside same session  
 
-### 🌐 Deployed App
+### Deployed App
 - Gradio UI  
 - Live Log panel  
 - Hugging Face Space hosting  
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 
 - Python  
 - Pandas  
@@ -137,70 +101,29 @@ A weighted scoring model produces a final **0–100 quality score**.
 
 ---
 
-## 🔎 Usage Examples
+## Architecture
+<img width="2437" height="2918" alt="Untitled diagram-2025-11-29-171454" src="https://github.com/user-attachments/assets/42fe873b-32dc-4927-adf8-5865c838b251" />
+
+## Usage Examples
 
 ### **1. Ask general questions**
 What can you do?
 
-shell
-Copy code
-
 ### **2. Run a default audit**
 audit my dataset
-
-shell
-Copy code
 
 ### **3. Audit a specific CSV**
 Place the file at:
 /content/project/test.csv
 
-arduino
-Copy code
-
 Then run:
 audit test.csv
-
-shell
-Copy code
 
 ### **4. Ask about the system**
 Run a quick self-check and describe your internal workflow.
 
-yaml
-Copy code
 
----
-
-## 🧩 Folder Structure
-
-project/
-│
-├── agents/
-│ ├── planner.py
-│ ├── worker.py
-│ └── evaluator.py
-│
-├── core/
-│ ├── context_engineering.py
-│ ├── a2a_protocol.py
-│ └── observability.py
-│
-├── memory/
-│ └── session_memory.py
-│
-├── tools/
-│ └── tools.py
-│
-├── main_agent.py
-└── app.py
-
-yaml
-Copy code
-
----
-
-## 🛠 How It Works
+## How It Works
 
 ### **Step 1 — Planner**
 Extracts metadata → generates a detailed audit plan.
@@ -219,7 +142,7 @@ Aggregates Worker results → assigns severity → calculates overall Data Quali
 
 ---
 
-## 📦 Installation (Local)
+## Installation (Local)
 
 ```bash
 git clone https://github.com/ItzMilitia/AI-Powered-Enterprise-Data-Quality-Auditor
@@ -227,7 +150,7 @@ cd AI-Powered-Enterprise-Data-Quality-Auditor
 pip install -r requirements.txt
 python project/run_demo.py
 
-🌟 If I Had More Time…
+If I Had More Time…
 1. LLM-Powered Insight Generator
 
 Explain findings + propose solutions.
@@ -257,7 +180,7 @@ Publish as:
 pip install dq-auditor-agent
 dq-audit mydata.csv
 
-🏁 Final Notes
+Final Notes
 
 This project demonstrates:
 ✔ Multi-agent design
